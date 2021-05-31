@@ -82,22 +82,22 @@ services:
       KAFKA_BROKERCONNECT: kafka1:9092
     networks:
       - test
-  node: 
-    container_name: node
-    restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
-    volumes:
-      - ./node:/app
-    command: [
-        "sh",
-        "-c",
-        "ls
-        && npm install && npm start"
-      ]
-    networks:
-      - test
+  # node: 
+  #   container_name: node
+  #   restart: always
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   volumes:
+  #     - ./node:/app
+  #   command: [
+  #       "sh",
+  #       "-c",
+  #       "ls
+  #       && npm install && npm start"
+  #     ]
+  #   networks:
+  #     - test
 
 
 volumes:
